@@ -1,7 +1,7 @@
 const toDOList = new Vue({
     el: '#list',
     data : {
-        toDO : [
+        toDo : [
             {
                 text : "fare il bucato",
                 done : false

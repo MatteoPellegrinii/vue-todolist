@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>TO DO LIST</title>
 </head>
 <body>
 
     <ul id="list">
-        <li v-for="(item, i) in toDo" :key="i">
+        <li v-for="(item, i) in toDo" :class="item.done === true ? 'underline' : '' "   :key="i">
             {{ item.text }}
         </li>
     </ul>
