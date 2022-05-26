@@ -19,7 +19,7 @@
 
     <ul id="list">
         <li v-for="(item, i) in toDo" :class="item.done === true ? 'underline' : '' "   :key="i">
-            <span @click="underline">{{ item.text }}</span>
+            <span @click="underline(item) ">{{ item.text }}</span>
             <i class="fa-solid fa-xmark" @click="deleteItem(i)" ></i>
         </li>
     </ul>

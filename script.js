@@ -34,12 +34,12 @@ const toDOList = new Vue({
         deleteItem(index) {
             this.toDo.splice(index,1)
         },
-        underline() {
-            if(this.toDo.done === false){
-                this.toDo.done = true
+        underline(toDo) {
+            if(toDo.done === false){
+                toDo.done = true
             }
             else {
-                this.toDo.done = false
+                toDo.done = false
             }
         }
     }
