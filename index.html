@@ -13,13 +13,13 @@
 
     <div id="app">
     <div class="newTo-do">
-        <input placeholder="nuovo to-do" v-model="newTodo.text" type="text">
+        <input placeholder="nuovo to-do" v-model="newTodo.text" @keyup.enter="newItem" type="text">
         <button @click="newItem" >Invia</button>
     </div>
 
     <ul id="list">
         <li v-for="(item, i) in toDo" :class="item.done === true ? 'underline' : '' "   :key="i">
-            {{ item.text }}
+            <span @click="underline">{{ item.text }}</span>
             <i class="fa-solid fa-xmark" @click="deleteItem(i)" ></i>
         </li>
     </ul>
