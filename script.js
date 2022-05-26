@@ -27,8 +27,11 @@ const toDOList = new Vue({
     methods : {
         newItem(){
             if(this.newTodo !== ""){
-                this.toDo.push(this.newTodo)
-                this.newTodo = ""
+                this.toDo.push(this.newTodo);
+                this.newTodo = {
+                    text : "",
+                    done : false
+                };
             }
         },
         deleteItem(index) {
