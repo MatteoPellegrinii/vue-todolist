@@ -1,6 +1,10 @@
 const toDOList = new Vue({
-    el: '#list',
+    el: '#app',
     data : {
+        newTodo : {
+            text : "",
+            done : false
+        },
         toDo : [
             {
                 text : "fare il bucato",
@@ -19,5 +23,16 @@ const toDOList = new Vue({
                 done : true
             }
         ]
+    },
+    methods : {
+        newItem(){
+            if(this.newTodo !== ""){
+                this.toDo.push(this.newTodo)
+                this.newTodo = ""
+            }
+        },
+        deleteItem(index) {
+            this.toDo.splice(index,1)
+        }
     }
 }) 
